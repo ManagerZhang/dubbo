@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dubbo.dao.CityDao">
+    <select id="findCityByName" parameterType="java.util.Map" resultType="com.dubbo.model.City">
+        SELECT id,province_id provinceId,city_name cityName,description FROM city WHERE city_name = #{cityName}
+    </select>
+</mapper>
